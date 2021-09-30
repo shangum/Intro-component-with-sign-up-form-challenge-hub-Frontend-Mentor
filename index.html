@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/styles.css">
+  <script type="text/javascript" src="./js/form-script.js"></script>
+  
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+  <style>    
+    .attribution { font-size: 12px; text-align: center; color: hsl(248, 32%, 49%); }        
+    .attribution a { color: white; }
+  </style>
+
+
+</head>
+<body>
+<main class="container">
+  <div class="container-block1">
+    <h1 class="header-text">
+      Learn to code by watching others
+    </h1>
+
+      <div class="info-text">
+        See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+        but understanding how developers think is invaluable. 
+      </div>
+  </div>
+
+  <div class="container-block2">
+      <div class="trial-blurb">
+        <span class="trial-blurb-accent">Try it free 7</span> days then $20/mo. thereafter
+      </div>
+
+      <form>
+        <!-- First Name -->
+        <div class="field-block">
+            <span id="tbFirstName-validator-symbol" class="validator-symbol hidden"></span>      
+            <input type="text" id="tbFirstName" name="tbFirstName" placeholder="First Name" class="form-input">
+            <div id="tbFirstName-invalid" class="validator-text hidden">First Name cannot be empty</div>
+        </div>
+        <!-- Last Name  -->
+        <div class="field-block">
+            <span id="tbLastName-validator-symbol" class="validator-symbol hidden"></span>            
+            <input type="text" id="tbLastName" name="tbLastName" placeholder="Last Name" class="form-input">
+            <div id="tbLastName-invalid" class="validator-text hidden">Last Name cannot be empty</div>
+        </div>
+        <!-- Email Address -->
+        <div class="field-block">
+            <span id="tbEmail-validator-symbol" class="validator-symbol hidden"></span>
+            <span id="tbEmail-validator-example-email" class="validator-email hidden">email@example/com</span>
+            <input type="text" id="tbEmail" name="tbEmail" placeholder="Email Address" class="form-input">
+            <div id="tbEmail-invalid" class="validator-text hidden">Looks like this is not an email</div>
+        </div>      
+        <!-- Password -->    
+        <div class="field-block">
+            <span id="tbPassword-validator-symbol" class="validator-symbol hidden"></span>          
+            <input type="password" id="tbPassword" name="tbPassword" placeholder="Password" class="form-input">
+            <div id="tbPassword-invalid" class="validator-text hidden">Password cannot be empty</div>
+        </div>  
+
+        <input type="submit" class="btn-submit" id="btnSubmit" value="Claim your free trial ">
+        <!-- Claim your free trial  -->
+        
+      <p class="terms-and-services">
+        By clicking the button, you are agreeing to our <span class="tos-accent">Terms and Services</span>
+      </p>
+      </form>
+
+  </div>
+  </main>  
+
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Rashid Wilson</a>.
+    </p>
+  </footer>
+</body>
+</html>

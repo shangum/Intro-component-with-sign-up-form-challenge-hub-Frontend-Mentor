@@ -1,0 +1,436 @@
+$font-family: 'Poppins';
+$font-size: 16px;
+$red: hsl(0, 100%, 74%);
+$green: hsl(154, 59%, 51%);
+$blue: hsl(248, 32%, 49%);
+$dark-blue: hsl(249, 10%, 26%);
+$grayish-blue: hsl(246, 25%, 77%);
+$grayish-blue-input: hsl(246, 25%, 77%, 0.5);
+
+@font-face {
+
+    font-family: $font-family;
+    src: url('../fonts/Poppins-Regular.ttf');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+
+    font-family: $font-family;
+    src: url('../fonts/Poppins-Regular.ttf');
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+
+    font-family: $font-family;    
+    src: url('../fonts/Poppins-SemiBold.ttf');
+    font-style: normal;
+    font-weight: 600;
+}
+
+@font-face {
+
+    font-family: $font-family;
+    src: url('../fonts/Poppins-Bold.ttf');
+    font-style : normal;
+    font-weight: 700;
+}
+
+@function toRem($value) {
+
+    $remValue: ($value / 16) + rem;
+    @return $remValue;
+
+}
+
+body {
+
+    font-size: $font-size;
+    background-color: $red;
+}
+
+.container {    
+
+    color: white;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.header-text {
+
+    font-family: $font-family;
+    font-weight: 700;    
+}
+
+.info-text {
+
+    font-family: $font-family;
+    font-weight: 400;
+}
+
+.trial-blurb {
+
+    border-radius: 0.5em;
+    background-color: $blue;    
+    font-family: $font-family;
+    font-weight: 500;    
+    box-shadow: 0px 10px rgb(0 0 0 / 0.1);
+}
+
+form {
+    
+    font-family: $font-family;
+    font-weight: 500;
+    color: $grayish-blue;
+    background-color: white;
+    border-radius: 1em;  
+    box-shadow: 0px 10px rgb(0 0 0 / 0.1);  
+}
+
+form input {
+    
+    width: 90%;    
+    line-height: toRem(32);      
+    border-radius: toRem(4);    
+    border-color: $grayish-blue-input;
+    border-style: solid;
+    border-width: 0.1em;
+    padding: 0.5em 0.7em;
+    font-family: $font-family;
+    font-size: toRem(16);
+    font-weight: 600;
+    text-indent: toRem(25);
+    caret-color: $dark-blue;
+    color: $dark-blue;
+}
+
+form input.form-input:focus {
+
+    outline: none !important;
+    border:1px solid $blue;    
+}
+
+form input::placeholder {
+
+    margin-left: 1em;
+    border-width: 0.2em;
+}
+
+form input.invalid-input::placeholder {
+
+    color: $red;
+}
+
+.invalid-input {
+
+    border-color: $red;
+}
+
+.btn-submit {
+
+    color: white;
+    background-color: $green;
+    text-transform: uppercase;
+    font-family: $font-family;
+    font-weight: 500;
+    width: 100%;    
+    box-shadow: inset 0 -3px rgb(0 0 0 / 0.1);    
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+
+    background-color: hsl(154, 69%, 51%);    
+}
+
+.terms-and-services {
+
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: toRem(12);
+    line-height: toRem(24);
+    padding-top: toRem(0);
+    padding-bottom: toRem(0);
+    margin-top: toRem(0);
+    margin-bottom: toRem(0);
+}
+
+.tos-accent {
+
+    color: $red;
+    font-weight: bold;
+}
+
+.validator-text {
+
+    color: $red;
+    font-family: $font-family;
+    font-weight: 600;
+    font-size: toRem(12);
+    margin-bottom: toRem(16);    
+    text-align: right;
+    width: inherit;
+}
+
+.validator-symbol {
+    
+    color: white;
+    border-radius: toRem(20);    
+    padding: toRem(0.1) toRem(10) toRem(0.1) toRem(10);
+    position: absolute;    
+    top: toRem(12);    
+    right: 3%;
+    background-image: url('../images/icon-error.svg');    
+    height: toRem(24);
+    width: toRem(10);
+    background-repeat: no-repeat;
+}
+
+.validator-email {
+
+    color: $red;   
+    font-family: $font-family;     
+    font-weight: 600;
+    position: absolute;    
+    top: toRem(12);
+    left: toRem(14);
+}
+
+.field-block {
+
+    position: relative;
+}
+
+.hidden {
+
+    display: none;
+}
+
+@media only screen and (min-width: toRem(1025))
+{
+    body {
+
+        background-image: url('../images/bg-intro-desktop.png');
+        background-repeat: repeat;
+    }
+
+    .container {  
+
+        max-width: toRem(1296);
+        margin-top: 8%;
+        margin-bottom: 8%;
+    }
+
+    .container-block1 {
+        
+        width: toRem(648);        
+    }
+
+    .container-block2 {
+          
+        width: toRem(648);        
+    }
+
+    form {
+            
+        padding: toRem(48) toRem(24) toRem(32) toRem(24);
+    }
+
+    form input {
+        
+        margin-bottom: toRem(16);
+    }
+
+    .validator-symbol {
+                       
+        top: toRem(12);        
+        right: 4%;        
+    }
+
+    .validator-text {   
+
+        font-size: toRem(12);
+        margin-bottom: toRem(16);    
+        text-align: right;        
+        width: 96%;
+    }
+
+
+    .trial-blurb {
+        
+        padding: toRem(16);   
+        margin-bottom: toRem(32);       
+    }
+    
+    .container-block1{
+
+        padding: toRem(48);        
+    }
+    
+
+    .header-text{
+
+        margin-top: toRem(140);
+        font-size: toRem(48);
+        line-height: toRem(48);
+        text-align: left;
+    }
+
+    .info-text {
+
+        text-align: left;
+        padding-right: toRem(32);
+    }
+    
+    .btn-submit {
+                
+        width: 94%;        
+    }
+    
+
+}
+
+@media only screen and (min-width: toRem(376)) and (max-width: toRem(1024))
+{
+    body {
+
+        background-image: url('../images/bg-intro-mobile.png');
+        background-repeat: repeat-x;
+    }
+
+    .container {    
+
+        max-width: toRem(819);
+        margin-top: toRem(75);
+        margin-bottom: toRem(75);        
+        flex-direction: column;
+    }
+    
+    .info-text {
+
+        margin-bottom: toRem(50);        
+        padding-left: toRem(100);
+        padding-right: toRem(100);
+    }
+
+    .trial-blurb {
+
+        margin-bottom: toRem(50);
+        padding: toRem(24) toRem(150) toRem(24) toRem(150);    
+    }
+
+    form {
+        
+        padding: toRem(64);
+    }
+
+    form input {
+        
+        margin-bottom: toRem(32);
+    }
+
+    .btn-submit {
+        
+        padding: auto;
+        width: 94%;
+        margin-bottom: toRem(16);        
+    }
+
+
+    .validator-text{
+        color: $red;
+        font-family: $font-family;
+        font-weight: 600;
+        font-size: toRem(12);
+        margin-bottom: toRem(16);    
+        text-align: right;        
+        width: 96%;
+    }
+    
+    .validator-symbol {
+        
+        border-radius: toRem(20);    
+        padding: toRem(0.1) toRem(10) toRem(0.1) toRem(10);        
+        top: toRem(12);        
+        right: 5%;        
+    }
+    
+    .validator-email {
+                    
+        top: toRem(12);
+        left: toRem(14);    
+    }
+
+    form input {
+        
+        margin-bottom: toRem(8);
+    }
+    
+
+}
+
+
+
+@media only screen and (max-width: toRem(375)) {
+
+    body {
+        background-image: url('../images/bg-intro-mobile.png');
+        background-repeat: repeat-x;    
+    }
+
+    .container {
+
+        margin: toRem(80) toRem(16) toRem(80) toRem(16);        
+        flex-direction: column;
+    }
+
+    .header-text {
+        
+        font-size: toRem(24);        
+        padding: 0.5em;
+    }
+
+    .info-text {
+        
+        margin-bottom: 3.8rem;
+    }
+
+    .trial-blurb {
+        
+        margin-bottom: toRem(32);    
+        padding: toRem(24) toRem(72) toRem(24) toRem(72);        
+        line-height: toRem(24);
+    }
+    
+    .trial-blurb-accent {
+
+        font-family: $font-family;
+        font-weight: bold;
+    }
+
+    form {
+        
+        padding: toRem(32);
+    }
+
+    form input {
+        
+        margin-bottom: toRem(16);
+    }
+
+    .btn-submit {
+        
+        padding: auto;
+    }
+
+    .validator-email {
+
+        color: $red;  
+    }
+
+} /* end media 375px */
